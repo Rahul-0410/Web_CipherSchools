@@ -1,0 +1,12 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+div ~ p::first-letter{
+    color: red;
+}
+
+a[target]{
+    background-color: cyan;
+}
+
