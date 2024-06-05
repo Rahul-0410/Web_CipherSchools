@@ -1,47 +1,47 @@
 *{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-/* p{
+p{
     text-align: center;
-} */
+}
 
-/* #myParagraph{
+#myParagraph{
     text-align: center;
 }
 .center-Paragraph{
     text-align: center;
-} */
+}
 
 /* group selector  */
 
-/* h1,.center-Paragraph,p{
+h1,.center-Paragraph,p{
     text-align: center;
     color: brown;
-} */
+}
 
-/* div p {
+div p {
     background-color: yellow;
-} */
+}
 
 /* only the first child will be cyan all other p will be yellow */
-/* div > p {
+div > p {
     background-color: cyan;
-} */
+}
 
-/* div + p{
+div + p{
     background-color: yellow;
-} */
+}
 
-/* div ~ p{
+div ~ p{
     background-color: yellow;
-} */
+}
 
-/* div ~ p:hover{
+div ~ p:hover{
     background-color: yellow;
 }
 div ~ p::first-letter{
     color: red;
-} */
+}
 
 a[target]{
     background-color: cyan;
