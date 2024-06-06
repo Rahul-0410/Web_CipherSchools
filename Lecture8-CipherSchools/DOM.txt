@@ -1,0 +1,98 @@
+> const headings=document.querySelectorAll("h2")
+· undefined
+
+> headings
+
+NodeList(2) [h2, h2] i
+0: h2
+1: h2
+length: 2
+>[[Prototype]]: NodeList
+
+> const firstheading=headings[0]
+undefined
+
+> firstheading
+
+<h2>List of amazing fruits</h2>
+
+const secondheadings=headings[1]
+
+< undefined
+
+> secondheadings
+
+<h2>Amazing places in kenya</h2>
+
+> document. querySelector(".orange"). innerHTML
+<. 'Oranges'
+
+> const appleList=document.querySelector(".apple-list")
+< undefined
+
+> appleList.children
+< HTMLCollection(6) [li.apple, li.orange, Li.avacado, li.grape, ul, li.Banana]
+0: li.apple
+1: li.orange
+2: li.avacado
+3: li.grape
+4: ul
+>5: li.Banana
+length: 6
+[[Prototype]]: HTMLCollection
+
+> const appleList=document.querySelector(".apple-list")
+< undefined
+
+> appleList.firstChild
+
+#text
+
+>
+appleList.lastChild
+
+#text
+
+> appleList.parentNode
+
+<div class="wrapper-1"> .< /div>
+
+> appleList.parentElement
+
+<. <div class="wrapper-1"></div>
+
+> const btn1=document.querySelector(".btn-1")
+< undefined
+
+> btn1.closest("main")
+
+<. <main> ..< /main>
+> btn1
+
+<button class="btn-1">Read Full list</button>
+
+> const orange=document.querySelector(".oranges")
+< undefined
+
+> const apple=document.querySelector(". apple")
+< undefined
+
+> const orange1=document. querySelector(".orange")
+< undefined
+
+> const apples=orange1.previousElementSibling
+< undefined
+
+> const avacado=orange1.next
+< undefined
+
+> const avacado=orange1.nextElementSibling
+<. undefined
+
+> apples
+
+< <li class="apple"> ...< /li>
+
+> avacado
+
+< <li class="avacado"> ...< /li>
