@@ -1,12 +1,21 @@
-import { Component } from "react";
-import ToDOScreen from "./screens/ToDoScreen";
+import './App.css';
+import {Component} from "react"
 
 class App extends Component{
-    render (){
-      return  <ToDOScreen/>
-    //   <h1>Welcome to Todo List App!</h1>
-    
-    }
+  name="CipherSchools"
+  render(){
+    return(
+      <>
+      <div>
+        <h1>This is {this.name}</h1>
+      </div>
+
+      <div>
+        <p>This is paragraph and name is: {this.name}</p>
+      </div>
+      </>
+    );
+  }
 }
 
 export default App;
