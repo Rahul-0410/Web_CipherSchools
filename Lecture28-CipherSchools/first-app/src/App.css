@@ -39,6 +39,19 @@
 }
 
 .app{
-  padding:  18vh 20px;
+  padding:  18vh 20%;
   height: 100vh;
+}
+
+.table-custom{
+  text-align: center;
+}
+
+.dark{
+  color: white !important;
+  background-color: black;
+}
+
+.my-heading{
+  margin-bottom: 5vh;
 }
