@@ -1,7 +1,8 @@
 import {useEffect} from "react"
 import WeatherRow from "../components/WeatherRow";
 import WeatherSummary from "../components/WeatherSummary";
-// 41 min
+import getWeather from "../api/weatherApi";
+//  53 min
 const fetchCoordinates = (callback) => {
     navigator.geolocation.getCurrentPosition(({ coords: { latitude, longitude } }) => {
         callback(latitude,longitude);
@@ -16,11 +17,13 @@ const fetchCoordinates = (callback) => {
 
 const WeatherPage = () => {
 
-    const isDay = false;
+    const isDay = true;
 
     useEffect(()=>{
-        fetchCoordinates((latitude,longitude)=>{
-            console.log(latitude,longitude);
+        fetchCoordinates( async(latitude,longitude)=>{
+            // console.log(latitude,longitude);
+           const WeatherInfo= await getWeather({latitude,longitude})
+           console.log(WeatherInfo);
         })
     },[])
 
