@@ -56,9 +56,9 @@ const WeatherPage = () => {
 
         setTodayWeather(currentWeather);
     }
-    // if(!weekWeather.length){
-    //     return <h3>Loading...</h3>
-    // }
+    if(!weekWeather.length){
+        return <h3>Loading...</h3>
+    }
 
     return (
         <div className={isDay ? "app" : "app dark"}>
