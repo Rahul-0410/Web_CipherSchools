@@ -28,7 +28,7 @@ div > p {
     background-color: cyan;
 }
 
-div + p{
+/* div + p{
     background-color: yellow;
 }
 
@@ -45,5 +45,5 @@ div ~ p::first-letter{
 
 a[target]{
     background-color: cyan;
-}
+} */
 

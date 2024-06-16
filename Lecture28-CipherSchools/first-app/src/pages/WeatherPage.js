@@ -2,7 +2,6 @@ import {useEffect, useState} from "react"
 import WeatherRow from "../components/WeatherRow";
 import WeatherSummary from "../components/WeatherSummary";
 import getWeather from "../api/weatherApi";
-//  53 min
 const fetchCoordinates = (callback) => {
     navigator.geolocation.getCurrentPosition(({ coords: { latitude, longitude } }) => {
         callback(latitude,longitude);
@@ -25,6 +24,8 @@ const WeatherPage = () => {
 
     const isDay = todayWeather.isDay ?? true;
 
+    // callback function , dependancy array 
+    // ? mounting adding to calltack or defined there and unmounting concept removing data from callstack ?? 
     useEffect(()=>{
         fetchCoordinates( async(latitude,longitude)=>{
             // console.log(latitude,longitude);
