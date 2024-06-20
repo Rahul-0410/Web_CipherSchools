@@ -43,7 +43,7 @@ app.put("/update-task/:taskId",async (req,res)=>{
         }
         return res.status(200).send({message: "Update success"});
 })
-
+// usinh thunder clinet to run requests
 app.delete("/delete-task/:taskId",async (req,res)=>{
     const {taskId} = req.params;
     const deleteResult = await Task.deleteOne({_id: taskId}
