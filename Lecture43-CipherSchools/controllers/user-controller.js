@@ -12,10 +12,10 @@ const addNewUser = async(req,res) =>{
     }
 }
 
-const loginUser = async (req,res)=>{
+const loginUser = async (req,res) =>{
     try{
         const {email, password} = req.body;
-        const user = await user.findByEmailAndPasswordForAuth(email,password);
+        const user = await User.findByEmailAndPasswordForAuth(email,password);
         console.info(`User with Email: ${email} successfully logged in.`);
         return res.status(200).send(user);
     } catch(err){
@@ -26,4 +26,4 @@ const loginUser = async (req,res)=>{
 
 
 
-module.exports = {loginUser, addNewUser};
+module.exports = {addNewUser, loginUser};

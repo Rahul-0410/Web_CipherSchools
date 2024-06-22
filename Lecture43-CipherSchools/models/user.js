@@ -7,7 +7,7 @@ const UserSchema = new Schema(
         email: {type: String, trim: true, lowercase: true, unique: true, required: true
             , validate : {validator(email) {
                 return isEmail(email);
-            }}
+            },},
         },
         age: {type:Number, required: true, validate: {validator(age){
             if(age<0) {
@@ -17,8 +17,8 @@ const UserSchema = new Schema(
         }}},
         password: {type: String, required: true, trim: true, minlength: 8
             , validate: {validator(password) {
-                if(password.includes(" ")|| password.includes("\n")|| password.includes("\t")){
-                    throw new Error(`Password includes space/tab/newLine`);
+                if(password.includes(" ") || password.includes("\n") || password.includes("\t")){
+                    throw new Error(`Password includes space/tab/newLine char`);
                 }
 
                 if(password.toLowerCase().includes("password")){
