@@ -1,5 +1,6 @@
 require("./appMongoose");
 const express= require("express");
+const cors= require('cors');
 const Task = require("./models/task");
 const userRouter = require("./routes/user-routes");
 const authMiddleware = require("./middleware/auth-middleware");
@@ -8,6 +9,7 @@ const app = express();
 
 // helps toparse json to a js object
 app.use(express.json());
+app.use(cors());
 app.use("/user", userRouter);
 
 app.get("/",(req,res)=>{
@@ -57,6 +59,16 @@ app.delete("/delete-task/:taskId",async (req,res)=>{
         return res.status(200).send({message: "Delete Success"});
 } )
 
-app.listen(808,()=>{
-    console.log("Server is running");
-})
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).send('Something broke!');
+  });
+
+// app.listen(8081,()=>{
+//     console.log("Server is running");
+// })
+
+const PORT = process.env.PORT || 8081;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
